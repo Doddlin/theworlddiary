@@ -12,11 +12,20 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require ckeditor/init
 //= require_tree .
 
 
 $(document).ready(function() {
+
+
+    var editor = new MediumEditor('.editable', {
+    placeholder: {
+        /* This example includes the default options for placeholder,
+           if nothing is passed this is what it used */
+        text: 'Share your experience...',
+        hideOnClick: true
+    }
+    });
 
   function toggleFullScreen() {
     if (!document.fullscreenElement &&    // alternative standard method
@@ -40,14 +49,5 @@ $(document).ready(function() {
   }
 
   $("#req_fullscreen").click(toggleFullScreen);
-
-  var editor = new MediumEditor('.editable', {
-  placeholder: {
-      /* This example includes the default options for placeholder,
-         if nothing is passed this is what it used */
-      text: 'Share your experience...',
-      hideOnClick: true
-  }
-  });
 
 });

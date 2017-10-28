@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TWD - The World Diary</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+  </head>
+
+  <body>
+    <section class="nav content-align-center">
+      <ul class="content">
+        <li><%= link_to "HOME", root_url %></li>
+        <li><%= link_to "READ", entries_url %></li>
+        <li>SEARCH</li>
+        <li><%= link_to "WRITE", new_entry_url %></li>
+        <li>ABOUT</li>
+      </ul>
+    </section>
+    <div id="wrapper" class="divided">
+      <%= yield %>
+    </div>
+  </body>
+</html>

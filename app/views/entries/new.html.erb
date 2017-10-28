@@ -1,0 +1,39 @@
+<%= javascript_include_tag Ckeditor.cdn_url %>
+
+<section class="wrapper style1 align-center">
+  <div class="inner">
+  <header>
+    <h2>Create your entry.</h2>
+  </header>
+  <div class="content">
+    <%= form_for :entry, :remote => true do |f| %>
+    <div class="field">
+      <%= f.label :entrytitle, "Name Your Entry:" %>
+      <%= f.text_field :entrytitle %>
+    </div>
+    <div class="field third">
+      <%= f.select :entryyear, (Time.now.year).downto(Time.now.year - 100).to_a, {:prompt => "Year"} %>
+    </div>
+    <div class="field third">
+      <%= f.date_select :entrymonth, {prompt: true, order: [:month]} %>
+    </div>
+
+    <div class="field half">
+      <%= f.country_select :entrycountry %>
+    </div>
+    <div class="field">
+      <%= f.label :entrysummary, "Summarize your entry:" %>
+      <%= f.text_area :entrysummary, rows: 4 %>
+    </div>
+    <div class="field">
+      <%= f.label :entrytext, "Share Your Experience:" %>
+      <div class="editable"></div>
+    </div>
+      <br />
+      <%= f.submit "Save entry" %>
+    <% end %>
+    <br />
+    <button id="req_fullscreen">Fullscreen</button>
+  </div>
+</div>
+</section>

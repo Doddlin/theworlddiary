@@ -14,7 +14,8 @@
  *= require_self
  */
 
- @import url(font-awesome.min.css);
+ @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+ @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 
  /*
@@ -8457,6 +8458,8 @@
   text-align: left;
   padding: 15px;
   border-bottom: solid 1px #47D3E5;
+  font-family: "Playfair Display";
+  color: #333;
   &:focus{
     transition: all 0.2s ease-in-out;
     outline: none;

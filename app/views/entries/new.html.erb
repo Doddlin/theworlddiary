@@ -8,25 +8,26 @@
   <div class="content">
     <%= form_for :entry, :remote => true do |f| %>
     <div class="field">
-      <%= f.label :entrytitle, "Name Your Entry:" %>
-      <%= f.text_field :entrytitle %>
+      <%= f.text_field :entrytitle, placeholder: "Name your entry..." %>
     </div>
+    <hr>
     <div class="field third">
       <%= f.select :entryyear, (Time.now.year).downto(Time.now.year - 100).to_a, {:prompt => "Year"} %>
     </div>
     <div class="field third">
       <%= f.date_select :entrymonth, {prompt: true, order: [:month]} %>
     </div>
-
+    <div class="field third">&nbsp;</div>
     <div class="field half">
       <%= f.country_select :entrycountry %>
     </div>
+    <div class="field half">&nbsp;</div>
+    <hr>
     <div class="field">
-      <%= f.label :entrysummary, "Summarize your entry:" %>
-      <%= f.text_area :entrysummary, rows: 4 %>
+      <%= f.text_area :entrysummary, rows: 2, placeholder: "Try to summarize your entry..." %>
     </div>
+    <hr>
     <div class="field">
-      <%= f.label :entrytext, "Share Your Experience:" %>
       <div class="editable"></div>
     </div>
       <br />

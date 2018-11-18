@@ -205,7 +205,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   country_select
   jbuilder (~> 2.5)
-  listen (>= 3.0.5, < 3.2)
+  listen
   paperclip
   pg
   puma (~> 3.7)

@@ -16,8 +16,7 @@
 
 $(document).ready(function() {
 
-  $(".animationbtn").click(function(event){
-    event.preventDefualt();
+  $(".animationbtn").click(function(){
     var aid = $(this).attr("href");
     $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
   });

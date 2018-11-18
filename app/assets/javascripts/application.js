@@ -21,6 +21,7 @@ $(document).ready(function() {
     var aid = $(this).attr("href");
     $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
   });
+  
 
 
     var editor = new MediumEditor('.editable', {

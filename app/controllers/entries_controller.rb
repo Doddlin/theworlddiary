@@ -11,5 +11,5 @@ end
 private
 
 def entry_params
-  params.require(:entry).permit(:entrytitle, :entryyear, :entrymonth, :entrycountry, :entrysummary, :entrytext)
+  params.require(:entry).permit(:entrytitle, :entryyear, :entrymonth, :entrydate, :entrycountry, :entrysummary, :entrytext)
 end

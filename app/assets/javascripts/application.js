@@ -16,12 +16,12 @@
 
 $(document).ready(function() {
 
-  $(".animationbtn").click(function(e){
-    e.preventDefualt();
+  $(".animationbtn").click(function(event){
+    event.preventDefualt();
     var aid = $(this).attr("href");
     $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
   });
-  
+
 
 
     var editor = new MediumEditor('.editable', {

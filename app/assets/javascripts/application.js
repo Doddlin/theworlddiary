@@ -16,6 +16,12 @@
 
 $(document).ready(function() {
 
+  $(".animationbtn").click(function(e){
+    e.preventDefualt();
+    var aid = $(this).attr("href");
+    $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+  });
+
 
     var editor = new MediumEditor('.editable', {
     placeholder: {
@@ -48,5 +54,6 @@ $(document).ready(function() {
   }
 
   $("#req_fullscreen").click(toggleFullScreen);
+
 
 });

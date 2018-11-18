@@ -7,3 +7,9 @@ class EntriesController < ApplicationController
     @entries = Entry.all
   end
 end
+
+private
+
+def entry_params
+  params.require(:entry).permit(:entrytitle, :entryyear, :entrymonth, :entrycountry, :entrysummary, :entrytext)
+end

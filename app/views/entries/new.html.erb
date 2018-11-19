@@ -11,15 +11,10 @@
       <%= f.text_field :entrytitle, placeholder: "Name your entry..." %>
     </div>
     <hr>
-    <div class="field third">
-      <%= f.select :entryyear, (Time.now.year).downto(Time.now.year - 100).to_a, {:prompt => "Year"} %>
+    <div class="field half">
+      <%= f.select :entryyear, (Time.now.year).downto(Time.now.year - 100).to_a, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' } %>
     </div>
-    <div class="field third">
-      <%= f.date_select :entrymonth, {prompt: true, order: [:month]} %>
-    </div>
-    <div class="field third">
-      <%= f.date_select :entrydate, {prompt: true, order: [:day]} %>
-    </div>
+    <div class="field half">&nbsp;</div>
     <div class="field half">
       <%= f.country_select :entrycountry %>
     </div>

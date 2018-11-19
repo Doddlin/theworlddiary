@@ -12,7 +12,7 @@
     </div>
     <hr>
     <div class="field half">
-      <%= f.select :entryyear, (Time.now.year).downto(Time.now.year - 100).to_a, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' } %>
+      <%= f.select :entrydate, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' } %>
     </div>
     <div class="field half">&nbsp;</div>
     <div class="field half">

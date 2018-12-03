@@ -6,15 +6,18 @@
     <h2>Create history</h2>
   </header>
   <div class="content">
-    <%= form_for :entry, :remote => true do |f| %>
+    <%= form_for @entry do |f| %>
     <div class="field">
       <%= f.text_field :entrytitle, placeholder: "Name your entry..." %>
     </div>
     <hr>
     <div class="field">
+      <h3 class="align-left">What date did this occur?</h3>
       <div class="field third">
       <%= f.date_select :entrydate, order: [:year, :month, :day], :date_separator => '</div><div class="field third">' %>
     </div>
+    <hr>
+    <h3 class="align-left">Where did this occur?</h3>
     <div class="field half">
       <%= f.country_select :entrycountry %>
     </div>
@@ -24,9 +27,7 @@
       <%= f.text_area :entrysummary, rows: 2, placeholder: "Try to summarize your entry..." %>
     </div>
     <hr>
-    <div class="field">
-      <div class="editable" name="entry[entrytext]"></div>
-    </div>
+    <%= f.text_area :entrytext, rows: 5, placeholder: "Write write write!" %>
       <br />
       <%= f.submit "Save entry" %>
       <button id="req_fullscreen">Fullscreen</button>

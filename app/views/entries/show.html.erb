@@ -4,6 +4,9 @@
       <h2><%= @entry.entrytitle %></h2>
     </header>
     <div class="content">
+      <div class="wrapper">
+        <span><%=@entry.entrydate %></span> | <span><%= @entry.entrycountry %></span>
+      </div>
       <p><%= @entry.entrytext %></p>
     </div>
   </div>
